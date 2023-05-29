@@ -172,6 +172,20 @@ const BackgroundExample = () => {
 export default BackgroundExample;
 ```
 
+```javascript
+<>
+  <div className="flex justify-center items-center h-screen">
+    <div
+      className="bg-cover bg-center h-80 w-96"
+      style={{
+        backgroundImage:
+          "url('https://images.pexels.com/photos/16902643/pexels-photo-16902643/free-photo-of-food-wood-landscape-mountains.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+      }}
+    ></div>
+  </div>
+</>
+```
+
 3. **Background position**: To control the position of a background image, you can use the `bg-{position}` classes. Replace `{position}` with values like `bottom`, `center`, `left`, `right`, or `top`. You can also combine multiple position values to achieve more precise positioning.
 
 Example:
