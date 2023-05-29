@@ -24,7 +24,7 @@ Content
 
 - Install Reat App using vite ` npm create vite@latest`
 - Give project name, select React and javaScript
-- Ater installed, change to project directory in your terminal
+- After installed, change to project directory in your terminal
 - `cd my-app`
 - `npm install`
 - Now setup the tailwind
@@ -176,7 +176,7 @@ export default BackgroundExample;
 </>
 ```
 
-- add background image using tailwind-congig file.
+- add background image using tailwind-config file.
 
 ```javascript
 extend: {
