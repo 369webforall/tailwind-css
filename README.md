@@ -128,9 +128,6 @@ To add an image as a background using Tailwind CSS in a React.js project, you ca
 Step 1: Prepare the image
 Make sure you have the image you want to use as the background in your project directory. You can either place it in the `public` folder or import it into your React component.
 
-Step 2: Add the CSS classes
-In your React component where you want to add the image background, use the `bg-[url]` class provided by Tailwind CSS. Replace `[url]` with the URL or path to your image. If the image is in the `public` folder, you can use the relative path. If it's imported into your component, you can use a variable or require the image.
-
 Here's an example:
 
 ```javascript
@@ -149,13 +146,6 @@ export default BackgroundExample;
 ```
 
 Replace `[url]` with the URL or path to your image. If the image is in the `public` folder, you can use a relative path like `"bg-[./path/to/image.jpg]"`. If it's imported into your component, you can use a variable like `"bg-[${backgroundImage}]"` or require the image like `"bg-[require('./path/to/image.jpg')]"`.
-
-Step 3: Style the background image
-By default, Tailwind CSS will stretch the image to cover the background area. If you want to control how the image is displayed, you can use additional CSS classes or inline styles.
-
-For example, you can use the `bg-[size]` class to control the size of the background image. Replace `[size]` with `cover`, `contain`, or a specific dimension like `h-64` or `w-80`. You can also use the `bg-[position]` class to control the position of the background image. Replace `[position]` with `top`, `bottom`, `left`, `right`, or a combination like `top-right`.
-
-Here's an updated example that sets the image to cover the background area and positions it at the top:
 
 ```javascript
 import React from 'react';
@@ -184,6 +174,19 @@ export default BackgroundExample;
     ></div>
   </div>
 </>
+```
+
+- add background image using tailwind-congig file.
+
+```javascript
+extend: {
+      backgroundImage: {
+        nature: 'url("./src/assets/images/bg-1.jpg")',
+      },
+    },
+
+--------
+<div className="bg-nature w-60 h-60 bg-cover bg-center bg-fixed"></div>
 ```
 
 3. **Background position**: To control the position of a background image, you can use the `bg-{position}` classes. Replace `{position}` with values like `bottom`, `center`, `left`, `right`, or `top`. You can also combine multiple position values to achieve more precise positioning.
