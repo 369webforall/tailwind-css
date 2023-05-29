@@ -20,6 +20,10 @@ Content
 - Dark Monde
 - Customization
 
+# Video
+
+[tailwind-css-5-29-2023](https://youtu.be/NdELGgWDBnk)
+
 # Installation and setup tailwind in your React App
 
 - Install Reat App using vite ` npm create vite@latest`
