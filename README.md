@@ -24,6 +24,8 @@ Content
 
 [tailwind-css-5-29-2023](https://youtu.be/NdELGgWDBnk)
 
+[tailwind-css-5-30-2023](https://youtu.be/Zg-nesIA3jI)
+
 # Installation and setup tailwind in your React App
 
 - Install Reat App using vite ` npm create vite@latest`
