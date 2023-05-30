@@ -166,6 +166,8 @@ const BackgroundExample = () => {
 export default BackgroundExample;
 ```
 
+example 1
+
 ```javascript
 <>
   <div className="flex justify-center items-center h-screen">
@@ -179,6 +181,21 @@ export default BackgroundExample;
   </div>
 </>
 ```
+
+example - 2
+
+```javascript
+const App = () => {
+  return (
+    <div className="container mx-auto bg-red-950 p-6 h-screen">
+      <h1 className="bg-red-600 font-oswald p-6">hello world, hi are u</h1>
+      <div className="bg-[url('./assets/images/bg-1.jpg')] w-full h-full bg-center bg-cover bg-no-repeat  bg-red-100"></div>
+    </div>
+  );
+};
+```
+
+example 3
 
 - add background image using tailwind-config file.
 
@@ -288,3 +305,167 @@ Example:
 ```
 
 [Tailwind-css-border-properties](https://tailwindcss.com/docs/border-radius)
+
+## Typography
+
+This will create a `tailwind.config.js` file in your project directory.
+
+Configure Tailwind CSS
+Open the `tailwind.config.js` file and locate the `theme` section. This is where you can customize various aspects of Tailwind CSS, including typography.
+
+For example, to change the default font family, you can modify the `theme` section as follows:
+
+```javascript
+// tailwind.config.js
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
+      },
+    },
+  },
+  // ...rest of the configuration
+};
+```
+
+In this example, we've added `Roboto` as the primary font family, followed by `Arial` and the generic `sans-serif` fallback.
+
+You can also configure other typography-related properties, such as font size, font weight, line height, and letter spacing, within the `theme` section.
+
+Style typography elements
+Now you can start using Tailwind CSS utility classes to style typography elements in your React.js components. Open the desired component file (e.g., `src/App.js`) and modify it as needed.
+
+Here's an example of how you can style heading and paragraph elements using Tailwind CSS utility classes:
+
+```jsx
+// src/App.js
+
+import React from 'react';
+
+function App() {
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Welcome to My Website</h1>
+      <p className="text-lg text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+        tincidunt felis sit amet felis sollicitudin, ac cursus magna varius.
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, we've used classes like `text-3xl` to set the heading to an extra-large font size, `font-bold` to apply a bold font weight, and `text-lg` to set the paragraph text to a large font size. Additionally, we've used the `text-gray-700` class to apply a specific shade of gray to the paragraph text.
+
+# spacing
+
+1. Margin (m-):
+   Use the `m-{size}` classes to apply margin to an element. Replace `{size}` with values such as `0`, `4`, `8`, `12`, `16`, `auto`, `px`, `rem`, etc. You can also specify different margin values for each side using directional classes like `m-{side}-{size}`. For example:
+
+```jsx
+<div className="m-4">{/* Content */}</div>
+```
+
+2. Padding (p-):
+   Use the `p-{size}` classes to apply padding to an element. Replace `{size}` with values similar to the previous example. You can also use directional classes for different sides. For example:
+
+```jsx
+<div className="p-4">{/* Content */}</div>
+```
+
+3. Negative margin (m-):
+   You can use negative margin classes to create overlapping or spacing effects. For example:
+
+```jsx
+<div className="-m-2">{/* Content */}</div>
+```
+
+4. Spacing utilities:
+   Tailwind CSS provides additional spacing utility classes to control specific aspects of spacing. Some commonly used ones include:
+
+- `mx-auto`: Centers an element horizontally by setting left and right margins to "auto".
+- `my-auto`: Centers an element vertically by setting top and bottom margins to "auto".
+- `space-x-{size}`: Adds horizontal spacing between child elements. Replace `{size}` with values similar to previous examples.
+- `space-y-{size}`: Adds vertical spacing between child elements.
+
+Step 5: Use spacing utility classes in your components
+Open the desired component file (e.g., `src/App.js`) and modify it to include spacing utility classes where needed. For example:
+
+```jsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="m-4 p-8">
+      <h1 className="text-2xl mb-4">Welcome to My App</h1>
+      <p className="mb-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <button className="px-4 py-2 bg-blue-500 text-white rounded">
+        Click Me
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, we've added margin (`m-4`) and padding (`p-8`) to the main container. The heading has a
+
+bottom margin (`mb-4`), the paragraph has a bottom margin (`mb-2`), and the button has horizontal and vertical padding (`px-4 py-2`).
+
+# Sizing
+
+1. Width and Height:
+   Use the `w-{size}` and `h-{size}` classes to set the width and height of an element, respectively. Replace `{size}` with values such as `full`, `1/2`, `4`, `8`, `px`, `rem`, etc. For example:
+
+```jsx
+import React from 'react';
+
+function App() {
+  return <div className="w-full h-64 bg-gray-200">{/* Content */}</div>;
+}
+
+export default App;
+```
+
+In this example, we've set the width to full (`w-full`) and the height to 64 pixels (`h-64`) for the container.
+
+2. Padding and Margin:
+   Use the `p-{size}` and `m-{size}` classes to set padding and margin, respectively. Replace `{size}` with values similar to the previous example. You can also use directional classes for different sides. For example:
+
+```jsx
+import React from 'react';
+
+function App() {
+  return <div className="p-4 m-2 bg-gray-200">{/* Content */}</div>;
+}
+
+export default App;
+```
+
+In this example, we've added padding (`p-4`) and margin (`m-2`) to the container.
+
+3. Min and Max Width/Height:
+   Use the `min-w-{size}`, `max-w-{size}`, `min-h-{size}`, and `max-h-{size}` classes to set the minimum and maximum width and height of an element. Replace `{size}` with values similar to the previous examples. For example:
+
+```jsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="min-w-0 max-w-lg min-h-screen max-h-64 bg-gray-200">
+      {/* Content */}
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, we've set the minimum width to 0 (`min-w-0`), the maximum width to large (`max-w-lg`), the minimum height to the screen height (`min-h-screen`), and the maximum height to 64 pixels (`max-h-64`) for the container.
