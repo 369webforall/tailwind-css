@@ -471,3 +471,51 @@ export default App;
 ```
 
 In this example, we've set the minimum width to 0 (`min-w-0`), the maximum width to large (`max-w-lg`), the minimum height to the screen height (`min-h-screen`), and the maximum height to 64 pixels (`max-h-64`) for the container.
+
+# flex
+
+Step 1: Create a Flexbox Component
+Now, you can create a new React component that uses flexbox layouts with Tailwind CSS. For example, create a new file called `FlexboxComponent.js` in your `src` folder and add the following code:
+
+```javascript
+import React from 'react';
+
+const FlexboxComponent = () => {
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col items-center">
+        <h1 className="text-4xl mb-4">Flexbox Example</h1>
+        <div className="flex">
+          <div className="flex-1 bg-red-500 p-4">Item 1</div>
+          <div className="flex-1 bg-blue-500 p-4">Item 2</div>
+          <div className="flex-1 bg-green-500 p-4">Item 3</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FlexboxComponent;
+```
+
+In this example, we have a parent container with the class `flex justify-center items-center h-screen`, which makes the content centered both horizontally and vertically on the screen. Inside the parent container, we have a flex container with the class `flex`, and three flex items with different colors and content.
+
+Step-2: Use the Flexbox Component
+Finally, you can use the `FlexboxComponent` in your main `App.js` file or any other component. For example, in `App.js`, add the following code:
+
+```javascript
+import React from 'react';
+import FlexboxComponent from './FlexboxComponent';
+
+const App = () => {
+  return (
+    <div>
+      <FlexboxComponent />
+    </div>
+  );
+};
+
+export default App;
+```
+
+This will render the `FlexboxComponent` inside the `App` component.
