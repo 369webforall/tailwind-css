@@ -521,3 +521,53 @@ export default App;
 ```
 
 This will render the `FlexboxComponent` inside the `App` component.
+
+
+# Grid 
+
+Step 1: Create a grid layout component
+Create a new file called `Grid.js` in the `src` folder. Add the following code to create a basic grid layout:
+
+```jsx
+import React from 'react';
+
+const Grid = () => {
+  return (
+    <div className="grid grid-cols-3 gap-4">
+      <div className="bg-blue-500 p-4">Item 1</div>
+      <div className="bg-green-500 p-4">Item 2</div>
+      <div className="bg-red-500 p-4">Item 3</div>
+      <div className="bg-yellow-500 p-4">Item 4</div>
+      <div className="bg-purple-500 p-4">Item 5</div>
+      <div className="bg-pink-500 p-4">Item 6</div>
+    </div>
+  );
+};
+
+export default Grid;
+```
+
+In this example, we create a grid with three columns and a gap of 4 units between each item. Each item has a different background color and padding.
+
+Step 2 - Use the grid component
+Open the `App.js` file in the `src` folder and replace its contents with the following code:
+
+```jsx
+import React from 'react';
+import Grid from './Grid';
+
+const App = () => {
+  return (
+    <div className="container mx-auto p-4">
+      <Grid />
+    </div>
+  );
+};
+
+export default App;
+```
+
+In this code, we import the `Grid` component and render it within a container div.
+
+
+
