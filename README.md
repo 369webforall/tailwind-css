@@ -17,8 +17,6 @@ Content
 - Filters
 - Transitions & Animation
 - Transforms
-- Dark Monde
-- Customization
 
 # Video
 
@@ -522,8 +520,7 @@ export default App;
 
 This will render the `FlexboxComponent` inside the `App` component.
 
-
-# Grid 
+# Grid
 
 Step 1: Create a grid layout component
 Create a new file called `Grid.js` in the `src` folder. Add the following code to create a basic grid layout:
@@ -569,5 +566,105 @@ export default App;
 
 In this code, we import the `Grid` component and render it within a container div.
 
+# Layouts
+
+## Aspect Ratio
+
+- Utilities for controlling the aspect ratio of an element.
+
+Step : Create a video component with aspect ratio container
+In your `src` directory, create a new file called `Video.js` and add the following code:
+
+```jsx
+import React from 'react';
+
+const Video = ({ src, aspectRatio }) => {
+  return (
+    <div className={`relative w-full ${aspectRatio}`}>
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={src}
+        title="Video"
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+};
+
+export default Video;
+```
+
+Step 7: Use the video component
+In your `App.js` file, import the `Video` component and use it in your application. Replace the default content in the `App` component with the following code:
+
+```jsx
+import React from 'react';
+import Video from './Video';
+
+const App = () => {
+  return (
+    <div className="container mx-auto px-4">
+      <h1 className="text-4xl font-bold text-center mt-8">Welcome to My App</h1>
+      <Video
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        aspectRatio="aspect-widescreen"
+      />
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Container
+
+A component for fixing an element's width to the current breakpoint.
+
+import React from 'react';
+```javascript
+
+const App = () => {
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-4xl font-bold text-center mt-8">Welcome to My App</h1>
+      <p className="text-center mt-4">This is a container in Tailwind CSS with React.</p>
+    </div>
+  );
+};
+
+export default App;
+```
 
 
+## Object Fit
+
+Utilities for controlling how a replaced element's content should be resized.
+
+object-contain //	object-fit: contain;
+
+
+## Object Position
+
+Utilities for controlling how a replaced element's content should be positioned within its container.
+
+object-bottom	 // object-position: bottom;
+object-center	// object-position: center;
+object-left	// object-position: left;
+
+## Position
+
+Utilities for controlling how an element is positioned in the DOM.
+
+static, fixed, absolute, relative, sticky.
+
+top-0,
+left-0,
+
+## Z-Index
+
+Utilities for controlling the stack order of an element.
+
+# Effects
+
+## Box Shadow
